@@ -19,7 +19,7 @@ export const generateQRPDF = (paymentinfo, docname, frm, language) => {
   try {
     showProgress(10, "initializing pdf...");
 
-    const pdf = new PDFDocument();
+    const pdf = new PDFDocument({ size: "A4" });
     const chunks = [];
 
     // Collect bytes directly from pdfkit
